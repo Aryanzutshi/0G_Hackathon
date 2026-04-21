@@ -1,0 +1,38 @@
+{
+  "name": "non-zero-backend",
+  "version": "0.0.1",
+  "description": "Official backend repo for NoN-Zero",
+  "main": "app.js",
+  "scripts": {
+    "start": "pm2 start app.js --name backend-container",
+    "stop": "pm2 stop backend-container",
+    "restart": "pm2 restart backend-container",
+    "logs": "pm2 logs backend-container",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "Zero-Knowledge",
+    "Orchestration"
+  ],
+  "author": "Aryan Zutshi",
+  "license": "See in LICENSE.md",
+  "dependencies": {
+    "@0glabs/0g-serving-broker": "^2.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.1.0",
+    "pm2": "^6.0.14",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.2.0",
+    "@eslint/markdown": "^8.0.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0"
+  }
+}
